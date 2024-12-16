@@ -13,8 +13,12 @@ def filter_card_types(card):
     - Magies
     - Pièges
     """
-    valid_types = ["Effect Monster", "Normal Monster"]
-    if card["type"] in valid_types:
+    monster_type = ["Effect Monster", "Normal Monster", "Ritual Monster", "Pendulum Effect Monster",
+                    "Flip Effect Monster", "Flip Tuner Effect Monster", "Gemini Monster", "Normal Tuner Monster",
+                    "Pendulum Effect Ritual Monster", "Pendulum Flip Effect Monster", "Pendulum Normal Monster",
+                    "Pendulum Tuner Effect Monster", "Ritual Effect Monster", "Spirit Monster", "Toon Monster",
+                    "Tuner Monster", "Union Effect Monster"]
+    if card["type"] in monster_type:
         return True
     if "Spell" in card["type"]:
         return True
